@@ -1,6 +1,6 @@
 var events = require('events');
-var bindings = require('bindings');
-var Mouse = bindings('addon').Mouse;
+var addon = require('./build/Release/addon.node');
+var Mouse = addon.Mouse;
 
 module.exports = function() {
 	var that = new events.EventEmitter();
